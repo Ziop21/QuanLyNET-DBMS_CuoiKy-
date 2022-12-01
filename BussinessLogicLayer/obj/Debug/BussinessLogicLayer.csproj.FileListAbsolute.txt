@@ -1,0 +1,15 @@
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\obj\Debug\BussinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\obj\Debug\BussinessLogicLayer.csproj.AssemblyReference.cache
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\bin\Debug\BussinessLogicLayer.dll.config
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\bin\Debug\BussinessLogicLayer.dll
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\bin\Debug\BussinessLogicLayer.pdb
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\bin\Debug\EntityFramework.dll
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\bin\Debug\DataAccessLayer.dll.config
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\bin\Debug\EntityFramework.xml
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\obj\Debug\BussinessLogicLayer.csproj.CopyComplete
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\obj\Debug\BussinessLogicLayer.dll
+C:\UTEXLMS\Nam3_2022_2023\DBMS\RoleKhachHang_form\BussinessLogicLayer\obj\Debug\BussinessLogicLayer.pdb

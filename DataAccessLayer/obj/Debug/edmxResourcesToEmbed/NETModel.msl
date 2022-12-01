@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NETModelStoreContainer" CdmEntityContainer="NETEntities">
+    <EntitySetMapping Name="BANGLUONGs">
+      <EntityTypeMapping TypeName="NETModel.BANGLUONG">
+        <MappingFragment StoreEntitySet="BANGLUONG">
+          <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
+          <ScalarProperty Name="VaiTro" ColumnName="VaiTro" />
+          <ScalarProperty Name="LuongTheoGio" ColumnName="LuongTheoGio" />
+          <ScalarProperty Name="HinhThuc" ColumnName="HinhThuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONGVIECs">
+      <EntityTypeMapping TypeName="NETModel.CONGVIEC">
+        <MappingFragment StoreEntitySet="CONGVIEC">
+          <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+          <ScalarProperty Name="TenCV" ColumnName="TenCV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GOIMONs">
+      <EntityTypeMapping TypeName="NETModel.GOIMON">
+        <MappingFragment StoreEntitySet="GOIMON">
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="MaMon" ColumnName="MaMon" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="TgGoiMon" ColumnName="TgGoiMon" />
+          <ScalarProperty Name="TgGiao" ColumnName="TgGiao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHHANGs">
+      <EntityTypeMapping TypeName="NETModel.KHACHHANG">
+        <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="MaMay" ColumnName="MaMay" />
+          <ScalarProperty Name="MaMayCu" ColumnName="MaMayCu" />
+          <ScalarProperty Name="ThoiGianConLai" ColumnName="ThoiGianConLai" />
+          <ScalarProperty Name="TienGio" ColumnName="TienGio" />
+          <ScalarProperty Name="TongThoiGian" ColumnName="TongThoiGian" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHHANGTHUONGXUYENs">
+      <EntityTypeMapping TypeName="NETModel.KHACHHANGTHUONGXUYEN">
+        <MappingFragment StoreEntitySet="KHACHHANGTHUONGXUYEN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="SoTienNap" ColumnName="SoTienNap" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHHANGVANGLAIs">
+      <EntityTypeMapping TypeName="NETModel.KHACHHANGVANGLAI">
+        <MappingFragment StoreEntitySet="KHACHHANGVANGLAI">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAYTINHs">
+      <EntityTypeMapping TypeName="NETModel.MAYTINH">
+        <MappingFragment StoreEntitySet="MAYTINH">
+          <ScalarProperty Name="MaMay" ColumnName="MaMay" />
+          <ScalarProperty Name="Hang" ColumnName="Hang" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENs">
+      <EntityTypeMapping TypeName="NETModel.NHANVIEN">
+        <MappingFragment StoreEntitySet="NHANVIEN">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
+          <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Tuoi" ColumnName="Tuoi" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TrinhDoVH" ColumnName="TrinhDoVH" />
+          <ScalarProperty Name="TrinhDoHV" ColumnName="TrinhDoHV" />
+          <ScalarProperty Name="SoNamKN" ColumnName="SoNamKN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUANLYCONGVIECs">
+      <EntityTypeMapping TypeName="NETModel.QUANLYCONGVIEC">
+        <MappingFragment StoreEntitySet="QUANLYCONGVIEC">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="NgayLamViec" ColumnName="NgayLamViec" />
+          <ScalarProperty Name="CaLamViec" ColumnName="CaLamViec" />
+          <ScalarProperty Name="GioLamViec" ColumnName="GioLamViec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUANTRIs">
+      <EntityTypeMapping TypeName="NETModel.QUANTRI">
+        <MappingFragment StoreEntitySet="QUANTRI">
+          <ScalarProperty Name="MaQuanTri" ColumnName="MaQuanTri" />
+          <ScalarProperty Name="MaTKAdmin" ColumnName="MaTKAdmin" />
+          <ScalarProperty Name="MaTKKhachHang" ColumnName="MaTKKhachHang" />
+          <ScalarProperty Name="TgBatDau" ColumnName="TgBatDau" />
+          <ScalarProperty Name="TgKetThuc" ColumnName="TgKetThuc" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAIKHOANs">
+      <EntityTypeMapping TypeName="NETModel.TAIKHOAN">
+        <MappingFragment StoreEntitySet="TAIKHOAN">
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THUCDONs">
+      <EntityTypeMapping TypeName="NETModel.THUCDON">
+        <MappingFragment StoreEntitySet="THUCDON">
+          <ScalarProperty Name="MaMon" ColumnName="MaMon" />
+          <ScalarProperty Name="TenMon" ColumnName="TenMon" />
+          <ScalarProperty Name="TienNguyenLieu" ColumnName="TienNguyenLieu" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="DaBan" ColumnName="DaBan" />
+          <ScalarProperty Name="ConLai" ColumnName="ConLai" />
+          <ScalarProperty Name="anh" ColumnName="anh" />
+          <ScalarProperty Name="PhanLoai" ColumnName="PhanLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TINNHANs">
+      <EntityTypeMapping TypeName="NETModel.TINNHAN">
+        <MappingFragment StoreEntitySet="TINNHAN">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MaQuanTri" ColumnName="MaQuanTri" />
+          <ScalarProperty Name="MaTKGui" ColumnName="MaTKGui" />
+          <ScalarProperty Name="MaTKNhan" ColumnName="MaTKNhan" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="TgGui" ColumnName="TgGui" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachHangGoiMons">
+      <EntityTypeMapping TypeName="NETModel.KhachHangGoiMon">
+        <MappingFragment StoreEntitySet="KhachHangGoiMon">
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="MaTk" ColumnName="MaTk" />
+          <ScalarProperty Name="MaMon" ColumnName="MaMon" />
+          <ScalarProperty Name="TenMon" ColumnName="TenMon" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="TgGoiMon" ColumnName="TgGoiMon" />
+          <ScalarProperty Name="TgGiao" ColumnName="TgGiao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_BangLuong">
+      <EntityTypeMapping TypeName="NETModel.view_BangLuong">
+        <MappingFragment StoreEntitySet="view_BangLuong">
+          <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
+          <ScalarProperty Name="VaiTro" ColumnName="VaiTro" />
+          <ScalarProperty Name="LuongTheoGio" ColumnName="LuongTheoGio" />
+          <ScalarProperty Name="HinhThuc" ColumnName="HinhThuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_CongViec">
+      <EntityTypeMapping TypeName="NETModel.view_CongViec">
+        <MappingFragment StoreEntitySet="view_CongViec">
+          <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+          <ScalarProperty Name="TenCV" ColumnName="TenCV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_GoiMon">
+      <EntityTypeMapping TypeName="NETModel.view_GoiMon">
+        <MappingFragment StoreEntitySet="view_GoiMon">
+          <ScalarProperty Name="STT" ColumnName="STT" />
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="MaMon" ColumnName="MaMon" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="TgGoiMon" ColumnName="TgGoiMon" />
+          <ScalarProperty Name="TgGiao" ColumnName="TgGiao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_KhachHang">
+      <EntityTypeMapping TypeName="NETModel.view_KhachHang">
+        <MappingFragment StoreEntitySet="view_KhachHang">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="MaMay" ColumnName="MaMay" />
+          <ScalarProperty Name="MaMayCu" ColumnName="MaMayCu" />
+          <ScalarProperty Name="ThoiGianConLai" ColumnName="ThoiGianConLai" />
+          <ScalarProperty Name="TienGio" ColumnName="TienGio" />
+          <ScalarProperty Name="TongThoiGian" ColumnName="TongThoiGian" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_KHTX">
+      <EntityTypeMapping TypeName="NETModel.view_KHTX">
+        <MappingFragment StoreEntitySet="view_KHTX">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="MaUuDai" ColumnName="MaUuDai" />
+          <ScalarProperty Name="SoTienNap" ColumnName="SoTienNap" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_KHVL">
+      <EntityTypeMapping TypeName="NETModel.view_KHVL">
+        <MappingFragment StoreEntitySet="view_KHVL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_MayTinh">
+      <EntityTypeMapping TypeName="NETModel.view_MayTinh">
+        <MappingFragment StoreEntitySet="view_MayTinh">
+          <ScalarProperty Name="MaMay" ColumnName="MaMay" />
+          <ScalarProperty Name="Hang" ColumnName="Hang" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_NhanVien">
+      <EntityTypeMapping TypeName="NETModel.view_NhanVien">
+        <MappingFragment StoreEntitySet="view_NhanVien">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
+          <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Tuoi" ColumnName="Tuoi" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TrinhDoVH" ColumnName="TrinhDoVH" />
+          <ScalarProperty Name="TrinhDoHV" ColumnName="TrinhDoHV" />
+          <ScalarProperty Name="SoNamKN" ColumnName="SoNamKN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_QLCV">
+      <EntityTypeMapping TypeName="NETModel.view_QLCV">
+        <MappingFragment StoreEntitySet="view_QLCV">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="NgayLamViec" ColumnName="NgayLamViec" />
+          <ScalarProperty Name="CaLamViec" ColumnName="CaLamViec" />
+          <ScalarProperty Name="GioLamViec" ColumnName="GioLamViec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_QuanTri">
+      <EntityTypeMapping TypeName="NETModel.view_QuanTri">
+        <MappingFragment StoreEntitySet="view_QuanTri">
+          <ScalarProperty Name="MaQuanTri" ColumnName="MaQuanTri" />
+          <ScalarProperty Name="MaTKAdmin" ColumnName="MaTKAdmin" />
+          <ScalarProperty Name="MaTKKhachHang" ColumnName="MaTKKhachHang" />
+          <ScalarProperty Name="TgBatDau" ColumnName="TgBatDau" />
+          <ScalarProperty Name="TgKetThuc" ColumnName="TgKetThuc" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_TaiKhoan">
+      <EntityTypeMapping TypeName="NETModel.view_TaiKhoan">
+        <MappingFragment StoreEntitySet="view_TaiKhoan">
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_ThucDon">
+      <EntityTypeMapping TypeName="NETModel.view_ThucDon">
+        <MappingFragment StoreEntitySet="view_ThucDon">
+          <ScalarProperty Name="MaMon" ColumnName="MaMon" />
+          <ScalarProperty Name="TenMon" ColumnName="TenMon" />
+          <ScalarProperty Name="TienNguyenLieu" ColumnName="TienNguyenLieu" />
+          <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+          <ScalarProperty Name="DaBan" ColumnName="DaBan" />
+          <ScalarProperty Name="ConLai" ColumnName="ConLai" />
+          <ScalarProperty Name="anh" ColumnName="anh" />
+          <ScalarProperty Name="PhanLoai" ColumnName="PhanLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="view_UuDai">
+      <EntityTypeMapping TypeName="NETModel.view_UuDai">
+        <MappingFragment StoreEntitySet="view_UuDai">
+          <ScalarProperty Name="MaUuDai" ColumnName="MaUuDai" />
+          <ScalarProperty Name="PhanTramTangThem" ColumnName="PhanTramTangThem" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_CapNhatMaMayChoKHACHHANG" FunctionName="NETModel.Store.sp_CapNhatMaMayChoKHACHHANG" />
+    <FunctionImportMapping FunctionImportName="sp_DangXuatTaiKhoan" FunctionName="NETModel.Store.sp_DangXuatTaiKhoan" />
+    <FunctionImportMapping FunctionImportName="sp_KhachHangDoiMatKhau" FunctionName="NETModel.Store.sp_KhachHangDoiMatKhau" />
+    <FunctionImportMapping FunctionImportName="sp_KhachHangGoiMon" FunctionName="NETModel.Store.sp_KhachHangGoiMon" />
+    <FunctionImportMapping FunctionImportName="sp_Login" FunctionName="NETModel.Store.sp_Login" />
+    <FunctionImportMapping FunctionImportName="sp_NhanVienLoad" FunctionName="NETModel.Store.sp_NhanVienLoad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NETModel.sp_NhanVienLoad_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
+          <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Tuoi" ColumnName="Tuoi" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TrinhDoVH" ColumnName="TrinhDoVH" />
+          <ScalarProperty Name="TrinhDoHV" ColumnName="TrinhDoHV" />
+          <ScalarProperty Name="SoNamKN" ColumnName="SoNamKN" />
+          <ScalarProperty Name="MaTK1" ColumnName="MaTK1" />
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SearchNhanVien" FunctionName="NETModel.Store.sp_SearchNhanVien">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NETModel.sp_SearchNhanVien_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
+          <ScalarProperty Name="MaCV" ColumnName="MaCV" />
+          <ScalarProperty Name="MaTK" ColumnName="MaTK" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="Tuoi" ColumnName="Tuoi" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="TrinhDoVH" ColumnName="TrinhDoVH" />
+          <ScalarProperty Name="TrinhDoHV" ColumnName="TrinhDoHV" />
+          <ScalarProperty Name="SoNamKN" ColumnName="SoNamKN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_SuaBangLuong" FunctionName="NETModel.Store.sp_SuaBangLuong" />
+    <FunctionImportMapping FunctionImportName="sp_SuaCongViec" FunctionName="NETModel.Store.sp_SuaCongViec" />
+    <FunctionImportMapping FunctionImportName="sp_SuaGoiMon" FunctionName="NETModel.Store.sp_SuaGoiMon" />
+    <FunctionImportMapping FunctionImportName="sp_SuaKhachHang" FunctionName="NETModel.Store.sp_SuaKhachHang" />
+    <FunctionImportMapping FunctionImportName="sp_SuaKHTX" FunctionName="NETModel.Store.sp_SuaKHTX" />
+    <FunctionImportMapping FunctionImportName="sp_SuaKHVL" FunctionName="NETModel.Store.sp_SuaKHVL" />
+    <FunctionImportMapping FunctionImportName="sp_SuaMayTinh" FunctionName="NETModel.Store.sp_SuaMayTinh" />
+    <FunctionImportMapping FunctionImportName="sp_SuaNhanVien" FunctionName="NETModel.Store.sp_SuaNhanVien" />
+    <FunctionImportMapping FunctionImportName="sp_SuaQLCV" FunctionName="NETModel.Store.sp_SuaQLCV" />
+    <FunctionImportMapping FunctionImportName="sp_SuaQuanTri" FunctionName="NETModel.Store.sp_SuaQuanTri" />
+    <FunctionImportMapping FunctionImportName="sp_SuaTaiKhoan" FunctionName="NETModel.Store.sp_SuaTaiKhoan" />
+    <FunctionImportMapping FunctionImportName="sp_SuaThucDon" FunctionName="NETModel.Store.sp_SuaThucDon" />
+    <FunctionImportMapping FunctionImportName="sp_SuaUuDai" FunctionName="NETModel.Store.sp_SuaUuDai" />
+    <FunctionImportMapping FunctionImportName="sp_ThemBangLuong" FunctionName="NETModel.Store.sp_ThemBangLuong" />
+    <FunctionImportMapping FunctionImportName="sp_ThemCongViec" FunctionName="NETModel.Store.sp_ThemCongViec" />
+    <FunctionImportMapping FunctionImportName="sp_ThemGoiMon" FunctionName="NETModel.Store.sp_ThemGoiMon" />
+    <FunctionImportMapping FunctionImportName="sp_ThemKhachHang" FunctionName="NETModel.Store.sp_ThemKhachHang" />
+    <FunctionImportMapping FunctionImportName="sp_ThemKHTX" FunctionName="NETModel.Store.sp_ThemKHTX" />
+    <FunctionImportMapping FunctionImportName="sp_ThemKHVL" FunctionName="NETModel.Store.sp_ThemKHVL" />
+    <FunctionImportMapping FunctionImportName="sp_ThemMayTinh" FunctionName="NETModel.Store.sp_ThemMayTinh" />
+    <FunctionImportMapping FunctionImportName="sp_ThemNhanVien" FunctionName="NETModel.Store.sp_ThemNhanVien" />
+    <FunctionImportMapping FunctionImportName="sp_ThemQLCV" FunctionName="NETModel.Store.sp_ThemQLCV" />
+    <FunctionImportMapping FunctionImportName="sp_ThemQuanTri" FunctionName="NETModel.Store.sp_ThemQuanTri" />
+    <FunctionImportMapping FunctionImportName="sp_ThemTaiKhoan" FunctionName="NETModel.Store.sp_ThemTaiKhoan" />
+    <FunctionImportMapping FunctionImportName="sp_ThemThucDon" FunctionName="NETModel.Store.sp_ThemThucDon" />
+    <FunctionImportMapping FunctionImportName="sp_ThemUuDai" FunctionName="NETModel.Store.sp_ThemUuDai" />
+    <FunctionImportMapping FunctionImportName="sp_XoaBangLuong" FunctionName="NETModel.Store.sp_XoaBangLuong" />
+    <FunctionImportMapping FunctionImportName="sp_XoaCongViec" FunctionName="NETModel.Store.sp_XoaCongViec" />
+    <FunctionImportMapping FunctionImportName="sp_XoaGoiMon" FunctionName="NETModel.Store.sp_XoaGoiMon" />
+    <FunctionImportMapping FunctionImportName="sp_XoaKhachHang" FunctionName="NETModel.Store.sp_XoaKhachHang" />
+    <FunctionImportMapping FunctionImportName="sp_XoaKHTX" FunctionName="NETModel.Store.sp_XoaKHTX" />
+    <FunctionImportMapping FunctionImportName="sp_XoaKHVL" FunctionName="NETModel.Store.sp_XoaKHVL" />
+    <FunctionImportMapping FunctionImportName="sp_XoaMayTinh" FunctionName="NETModel.Store.sp_XoaMayTinh" />
+    <FunctionImportMapping FunctionImportName="sp_XoaNhanVien" FunctionName="NETModel.Store.sp_XoaNhanVien" />
+    <FunctionImportMapping FunctionImportName="sp_XoaQLCV" FunctionName="NETModel.Store.sp_XoaQLCV" />
+    <FunctionImportMapping FunctionImportName="sp_XoaQuanTri" FunctionName="NETModel.Store.sp_XoaQuanTri" />
+    <FunctionImportMapping FunctionImportName="sp_XoaTaiKhoan" FunctionName="NETModel.Store.sp_XoaTaiKhoan" />
+    <FunctionImportMapping FunctionImportName="sp_XoaThucDon" FunctionName="NETModel.Store.sp_XoaThucDon" />
+    <FunctionImportMapping FunctionImportName="sp_XoaUuDai" FunctionName="NETModel.Store.sp_XoaUuDai" />
+    <FunctionImportMapping FunctionImportName="ThongKeChiPhiDATU" FunctionName="NETModel.Store.ThongKeChiPhiDATU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NETModel.ThongKeChiPhiDATU_Result">
+          <ScalarProperty Name="TenMon" ColumnName="TenMon" />
+          <ScalarProperty Name="DaBan" ColumnName="DaBan" />
+          <ScalarProperty Name="TongThu" ColumnName="TongThu" />
+          <ScalarProperty Name="TongChi" ColumnName="TongChi" />
+          <ScalarProperty Name="LoiNhuan" ColumnName="LoiNhuan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_HoatDongNhanVien" FunctionName="NETModel.Store.sp_HoatDongNhanVien">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NETModel.sp_HoatDongNhanVien_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="NgayLamViec" ColumnName="NgayLamViec" />
+          <ScalarProperty Name="CaLamViec" ColumnName="CaLamViec" />
+          <ScalarProperty Name="GioLamViec" ColumnName="GioLamViec" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LuongThangNhanVien" FunctionName="NETModel.Store.sp_LuongThangNhanVien">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NETModel.sp_LuongThangNhanVien_Result">
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="LuongThang" ColumnName="LuongThang" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LuongThangNhanVienAll" FunctionName="NETModel.Store.sp_LuongThangNhanVienAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NETModel.sp_LuongThangNhanVienAll_Result">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="LuongThang" ColumnName="LuongThang" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ThongKeChiPhiDATU_Thang" FunctionName="NETModel.Store.ThongKeChiPhiDATU_Thang">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NETModel.ThongKeChiPhiDATU_Thang_Result">
+          <ScalarProperty Name="PhanLoai" ColumnName="PhanLoai" />
+          <ScalarProperty Name="TongThu" ColumnName="TongThu" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ThongKeLuongThang" FunctionName="NETModel.Store.ThongKeLuongThang">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NETModel.ThongKeLuongThang_Result">
+          <ScalarProperty Name="Thang" ColumnName="Thang" />
+          <ScalarProperty Name="LuongThang" ColumnName="LuongThang" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

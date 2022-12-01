@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67c6d690903943ddb31ce134c657d8ef" Name="Diagram1">
+        <EntityTypeShape EntityType="NETModel.BANGLUONG" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.CONGVIEC" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.GOIMON" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.KHACHHANG" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.KHACHHANGTHUONGXUYEN" Width="1.5" PointX="8.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.KHACHHANGVANGLAI" Width="1.5" PointX="8.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.MAYTINH" Width="1.5" PointX="3.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.NHANVIEN" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.QUANLYCONGVIEC" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.QUANTRI" Width="1.5" PointX="3" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.TAIKHOAN" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.THUCDON" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.TINNHAN" Width="1.5" PointX="5.25" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.KhachHangGoiMon" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_BangLuong" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_CongViec" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_GoiMon" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_KhachHang" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_KHTX" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_KHVL" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_MayTinh" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_NhanVien" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_QLCV" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_QuanTri" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_TaiKhoan" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_ThucDon" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NETModel.view_UuDai" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="NETModel.FK__NHANVIEN__MaLuon__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK__NHANVIEN__MaCV__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK__GOIMON__MaMon__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK__GOIMON__MaTK__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK__KHACHHANG__MaMay__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK__KHACHHANG__MaTK__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK__KHACHHANGT__MaKH__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK__KHACHHANGV__MaKH__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK__NHANVIEN__MaTK__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK__QUANLYCONG__MaNV__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK_QUANTRI_TAIKHOAN_MaTKAdmin" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK_QUANTRI_TAIKHOAN_MaTKKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="NETModel.FK_TINNHAN_QUANTRI_MaQuanTri" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
