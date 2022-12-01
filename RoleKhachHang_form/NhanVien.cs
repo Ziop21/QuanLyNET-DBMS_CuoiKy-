@@ -18,6 +18,8 @@ namespace RoleKhachHang_form
         SqlCommand cmd = null;
         DataTable dt = null;
         SqlDataReader dr = null;
+        public bool isAdmin = false;
+        public bool isNhanVien = false;
         public NhanVien()
         {
             InitializeComponent();
@@ -146,6 +148,7 @@ namespace RoleKhachHang_form
                 txtMCV.Enabled = false;
                 txtML.Enabled = false;
                 txtTK.Enabled = false;
+                this.isNhanVien = true;
                 loadNhanVienPQ(username);
             }
 
@@ -154,6 +157,7 @@ namespace RoleKhachHang_form
                 btnEdit.Enabled = true;
                 btnAdd.Enabled = true;
                 btnDelete.Enabled = true;
+                this.isAdmin = true;
                 LoadNV();
             }
         }
@@ -176,7 +180,10 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@soNamKN", SqlDbType.Int).Value = Int32.Parse(txtKN.Text);
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadNV();
+            if (this.isAdmin)
+                LoadNV();
+            else if (this.isNhanVien)
+                loadNhanVienPQ(this.username);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -197,7 +204,10 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@soNamKN", SqlDbType.Int).Value = Int32.Parse(txtKN.Text);
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadNV();
+            if (this.isAdmin)
+                LoadNV();
+            else if (this.isNhanVien)
+                loadNhanVienPQ(this.username);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -207,7 +217,10 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@maNV", SqlDbType.VarChar).Value = txtMNV.Text;
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadNV();
+            if (this.isAdmin)
+                LoadNV();
+            else if (this.isNhanVien)
+                loadNhanVienPQ(this.username);
         }
 
         private void btnInit_Click(object sender, EventArgs e)

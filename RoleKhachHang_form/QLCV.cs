@@ -17,6 +17,9 @@ namespace RoleKhachHang_form
         SqlDataAdapter adapter = null;
         DataTable dt = null;
         SqlConnection conn = null;
+        public bool isThuNgan = false;
+        public bool isAdmin = false;
+        public bool isNhanVien = false;
         public QLCV()
         {
             InitializeComponent();
@@ -88,6 +91,7 @@ namespace RoleKhachHang_form
                 btnEdit.Enabled = false;
                 btnAdd.Enabled = false;
                 btnDelete.Enabled = false;
+                this.isNhanVien = true;
                 QLCV_PQ();
             }
             else
@@ -95,6 +99,7 @@ namespace RoleKhachHang_form
                 btnAdd.Enabled = true;
                 btnDelete.Enabled = true;
                 btnEdit.Enabled = true;
+                this.isAdmin = true;
                 LoadQLCV();
             }
         }
@@ -109,7 +114,10 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@gioLamViec", SqlDbType.Int).Value = Int32.Parse(txtGLV.Text);
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadQLCV();
+            if (this.isAdmin)
+                LoadQLCV();
+            else if (this.isThuNgan)
+                QLCV_PQ();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -123,7 +131,10 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@gioLamViec", SqlDbType.Int).Value = Int32.Parse(txtGLV.Text);
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadQLCV();
+            if (this.isAdmin)
+                LoadQLCV();
+            else if (this.isThuNgan)
+                QLCV_PQ();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -133,7 +144,10 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@id", SqlDbType.VarChar).Value = txtID.Text;
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadQLCV();
+            if (this.isAdmin)
+                LoadQLCV();
+            else if (this.isThuNgan)
+                QLCV_PQ();
         }
 
         private void bntInit_Click(object sender, EventArgs e)

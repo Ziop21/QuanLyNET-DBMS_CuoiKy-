@@ -18,6 +18,9 @@ namespace RoleKhachHang_form
         SqlCommand cmd = null;
         DataTable dt = null;
         SqlDataReader dr = null;
+        public bool isThuNgan = false;
+        public bool isAdmin = false;
+        public bool isNhanVien = false;
         public TaiKhoan()
         {
             InitializeComponent();
@@ -114,6 +117,7 @@ namespace RoleKhachHang_form
                 txtMTK.Enabled = false;
                 cbTT.Enabled = false;
                 dtpNT.Enabled = false;
+                this.isNhanVien = true;
                 TaiKhoanLoadPQ(username);
             }
             else if (username.Contains("thungan"))
@@ -121,6 +125,7 @@ namespace RoleKhachHang_form
                 btnAdd.Enabled = true;
                 btnDelete.Enabled = true;
                 btnEdit.Enabled = true;
+                this.isThuNgan = true;
                 LoadTK(1);
             }    
             else
@@ -128,6 +133,7 @@ namespace RoleKhachHang_form
                 btnAdd.Enabled = true;
                 btnDelete.Enabled = true;
                 btnEdit.Enabled = true;
+                this.isAdmin = true;
                 LoadTK();
             }
 
@@ -142,6 +148,12 @@ namespace RoleKhachHang_form
         {
             cmd = new SqlCommand("sp_ThemTaiKhoan", conn);
             cmd.CommandType = CommandType.StoredProcedure;
+
+            if (this.isThuNgan && !txtMTK.Text.Contains("tk"))
+            {
+                MessageBox.Show("Mã tài khoản tạo không phải là tài khoản khách hàng");
+                return;
+            }
             cmd.Parameters.Add("@maTK", SqlDbType.VarChar).Value = txtMTK.Text;
             cmd.Parameters.Add("@taiKhoan", SqlDbType.VarChar).Value = txtTK.Text;
             cmd.Parameters.Add("@matKhau", SqlDbType.VarChar).Value = txtMK.Text;
@@ -149,7 +161,12 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@tinhTrang", SqlDbType.VarChar).Value = cbTT.SelectedItem.ToString();
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadTK();
+            if (this.isThuNgan)
+                LoadTK(1);
+            else if (this.isAdmin)
+                LoadTK();
+            else if (this.isNhanVien)
+                TaiKhoanLoadPQ(this.username);
 
         }
 
@@ -164,7 +181,12 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@tinhTrang", SqlDbType.VarChar).Value = cbTT.SelectedItem.ToString();
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadTK();
+            if (this.isThuNgan)
+                LoadTK(1);
+            else if (this.isAdmin)
+                LoadTK();
+            else if (this.isNhanVien)
+                TaiKhoanLoadPQ(this.username);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -174,7 +196,12 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@maTK", SqlDbType.VarChar).Value = txtMTK.Text;
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadTK();
+            if (this.isThuNgan)
+                LoadTK(1);
+            else if (this.isAdmin)
+                LoadTK();
+            else if (this.isNhanVien)
+                TaiKhoanLoadPQ(this.username);
         }
 
         private void btnInit_Click(object sender, EventArgs e)

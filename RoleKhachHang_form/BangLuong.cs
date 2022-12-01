@@ -18,6 +18,8 @@ namespace RoleKhachHang_form
         DataTable dt = null;
         SqlConnection conn = null;
         SqlDataReader dr = null;
+        public bool isAdmin = false;
+        public bool isNhanVien = false;
         public BangLuong()
         {
             InitializeComponent();
@@ -60,15 +62,46 @@ namespace RoleKhachHang_form
             cbHT.DisplayMember = "HinhThuc";
             conn.Close();
         }
+        private void loadBL_PQ(string username)
+        {
+            conn = new SqlConnection(connection);
+            conn.Open();
+            cmd = new SqlCommand("sp_BangLuongLoad", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@maTK", SqlDbType.VarChar).Value = username;
+            adapter = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+            txtML.ReadOnly = true;
+            txtML.DataBindings.Clear();
+            txtML.DataBindings.Add("Text", dataGridView1.DataSource, "MaLuong");
+            txtVT.DataBindings.Clear();
+            txtVT.DataBindings.Add("Text", dataGridView1.DataSource, "VaiTro");
+            txtLTG.DataBindings.Clear();
+            txtLTG.DataBindings.Add("Text", dataGridView1.DataSource, "LuongTheoGio");
+            IList<string> listHT = new List<string>();
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                listHT.Add(dr[3].ToString());
+            }
+            listHT = listHT.Distinct().ToList();
+            cbHT.DataSource = listHT;
+            cbHT.DisplayMember = "HinhThuc";
+            conn.Close();
+        }
 
         private void BangLuong_Load(object sender, EventArgs e)
         {
-            if (username.StartsWith("vs") || username.StartsWith("tn") || username.StartsWith("kt"))
+            if (username.StartsWith("vs") || username.StartsWith("tn") || username.StartsWith("kt") || username.StartsWith("db"))
             {
                 btnEdit.Enabled = false;
                 btnAdd.Enabled = false;
                 btnDelete.Enabled = false;
                 btnLuongAll.Visible = false;
+                this.isNhanVien = true;
+                loadBL_PQ(this.username);
             }
             else
             {
@@ -77,8 +110,10 @@ namespace RoleKhachHang_form
                 btnEdit.Enabled = true;
                 btnLuongAll.Visible = true;
                 btnLuong.Visible = false;
+                this.isAdmin = true;
+                LoadBL();
             }
-            LoadBL();
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -91,7 +126,10 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@hinhThuc", SqlDbType.NVarChar).Value = cbHT.SelectedItem.ToString();
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadBL();
+            if (this.isAdmin)
+                LoadBL();
+            else if (this.isNhanVien)
+                loadBL_PQ(username);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -104,7 +142,10 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@hinhThuc", SqlDbType.NVarChar).Value = cbHT.SelectedItem.ToString();
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadBL();
+            if (this.isAdmin)
+                LoadBL();
+            else if (this.isNhanVien)
+                loadBL_PQ(username);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -114,7 +155,10 @@ namespace RoleKhachHang_form
             cmd.Parameters.Add("@maLuong", SqlDbType.VarChar).Value = txtML.Text;
             adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);
-            LoadBL();
+            if (this.isAdmin)
+                LoadBL();
+            else if (this.isNhanVien)
+                loadBL_PQ(username);
         }
 
         private void btnInit_Click(object sender, EventArgs e)
@@ -137,7 +181,7 @@ namespace RoleKhachHang_form
             conn.Open();
             cmd = new SqlCommand("sp_LuongThangNhanVien", conn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@maNV", SqlDbType.VarChar).Value = username;
+            cmd.Parameters.Add("@matk", SqlDbType.VarChar).Value = username;
             adapter = new SqlDataAdapter(cmd);
             dt = new DataTable();
             adapter.Fill(dt);

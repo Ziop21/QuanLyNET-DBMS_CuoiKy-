@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BussinessLogicLayer;
+using DataAccessLayer;
 
 namespace RoleKhachHang_form
 {
     public partial class Login : Form
     {
+        TaiKhoanDAO db_tk = new TaiKhoanDAO();
         SqlConnection conn = null;
         SqlDataAdapter adapter = null;
         SqlCommand cmd = null;
@@ -44,9 +47,11 @@ namespace RoleKhachHang_form
             if (status.StartsWith("ad"))
             {
                 Main main = new Main(status);
+                db_tk.updateTrangThai(status);
                 this.Hide();
                 main.ShowDialog();
                 this.Close();
+               
             }
             else if (status.StartsWith("kt") || status.StartsWith("vs"))
             {
@@ -64,6 +69,7 @@ namespace RoleKhachHang_form
                 main.nhânViênToolStripMenuItem.Text = "Thông tin cá nhân";
                 main.quảnLýTàiKhoảnToolStripMenuItem.Visible = false;
                 main.quảnLýTiệmToolStripMenuItem.Visible = false;
+                db_tk.updateTrangThai(status);
                 this.Hide();
                 main.ShowDialog();
                 this.Close();
@@ -84,7 +90,8 @@ namespace RoleKhachHang_form
                 main.tàiKhoảnToolStripMenuItem.Text = "Tài khoản cá nhân";
                 main.nhânViênToolStripMenuItem.Text = "Thông tin cá nhân";
                 main.quảnLýTàiKhoảnToolStripMenuItem.Visible = false;
-                this.Hide();
+                db_tk.updateTrangThai(status);
+                this.Hide();                
                 main.ShowDialog();
                 this.Close();
             }    
@@ -102,6 +109,7 @@ namespace RoleKhachHang_form
                 main.gọiMónToolStripMenuItem.Enabled = true;
                 main.tàiKhoảnToolStripMenuItem.Text = "Tài khoản cá nhân";
                 main.nhânViênToolStripMenuItem.Text = "Thông tin cá nhân";
+                db_tk.updateTrangThai(status);
                 this.Hide();
                 main.ShowDialog();
                 this.Close();

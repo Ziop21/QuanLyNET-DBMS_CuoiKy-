@@ -135,6 +135,7 @@ namespace BussinessLogicLayer
             {
                 var taikhoan = db.TAIKHOANs.Select(p => p).Where(p => p.MaTK == maTK).First();
                 taikhoan.TinhTrang = "on";
+                db.SaveChanges();
             }
             catch (Exception)
             {

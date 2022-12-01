@@ -52,7 +52,6 @@ namespace RoleKhachHang_form
             txtMMC.DataBindings.Clear();
             txtMMC.DataBindings.Add("Text", dataGridView1.DataSource, "MaMayCu");
             txtTG.DataBindings.Clear();
-
             txtTGCL.DataBindings.Add("Text", dataGridView1.DataSource, "ThoiGianConLai");
             txtTTG.DataBindings.Clear();
             txtTG.DataBindings.Add("Text", dataGridView1.DataSource, "TienGio");
@@ -84,7 +83,7 @@ namespace RoleKhachHang_form
         {
             cmd = new SqlCommand("sp_ThemKhachHang", conn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@maKH", SqlDbType.VarChar).Value = txtMKH.Text;
+            cmd.Parameters.Add("@maKH", SqlDbType.VarChar).Value = txtMKH.Text;  
             cmd.Parameters.Add("@maTK", SqlDbType.VarChar).Value = txtMTK.Text;
             cmd.Parameters.Add("@maMay", SqlDbType.VarChar).Value = !string.IsNullOrEmpty(txtMM.Text) ? txtMM.Text : (object)DBNull.Value;
 

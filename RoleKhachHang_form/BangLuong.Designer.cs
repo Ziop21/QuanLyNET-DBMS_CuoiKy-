@@ -64,7 +64,7 @@ namespace RoleKhachHang_form
             // btnLuongAll
             // 
             this.btnLuongAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuongAll.Location = new System.Drawing.Point(560, 244);
+            this.btnLuongAll.Location = new System.Drawing.Point(560, 243);
             this.btnLuongAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuongAll.Name = "btnLuongAll";
             this.btnLuongAll.Size = new System.Drawing.Size(133, 37);
@@ -83,6 +83,7 @@ namespace RoleKhachHang_form
             this.btnLuong.TabIndex = 4;
             this.btnLuong.Text = "Xem lương";
             this.btnLuong.UseVisualStyleBackColor = true;
+            this.btnLuong.Click += new System.EventHandler(this.btnLuong_Click);
             // 
             // cbHT
             // 
