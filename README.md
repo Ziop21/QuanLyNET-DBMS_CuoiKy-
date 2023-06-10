@@ -15,5 +15,5 @@ SQL
 Nền tảng: 
 Winform C#
 
-
-
+Công nghệ: 
+EntityFramework Database First Approach 
