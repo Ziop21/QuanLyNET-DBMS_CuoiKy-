@@ -6,10 +6,10 @@ Mô tả:
 Đây là đồ án về phần mềm quản lý quán NET với các chức năng: đăng nhập, đăng ký, đăng xuất, chat với nhân viên, gọi món, quản lý nhân viên, thống kê, ...
 
 Mục đích chính: 
-Tìm hiểu và vận dụng kiến thức học tập của môn Hệ quản trị CSDL để làm thành một đồ án.
+Tìm hiểu và chủ yếu vận dụng kiến thức học tập của môn Hệ quản trị CSDL để làm thành một đồ án. 
 
 Ngôn ngữ lập trình: 
-C#
+C#,
 SQL
 
 Nền tảng: 
